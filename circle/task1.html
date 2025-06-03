@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tsk1</title>
+    <script>
+        let start = parseInt(prompt('введите значение налача диапозона:'));
+        
+        let end = parseInt(prompt('введите значение конца диапозона:'));
+       
+        let sum = 0;
+        let temp;
+        if(start>end){ //5>1
+            temp=start;// 5
+            start=end; //1
+            end=temp; // temp=5
+        }
+        for(let i=start; i<=end; i++){
+            sum= sum+=i;
+        
+        }
+       let  x=-5
+Math.abs(x);
+console.log(x);
+        // Math.abs ( функция модуля )
+        alert(sum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
