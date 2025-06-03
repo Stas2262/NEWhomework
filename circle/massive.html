@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload= function (){
+    //const cars = ["Saab", "Volvo", "BMW"];
+//cars[0] = "Opel";
+// document.getElementById("demo").innerHTML = cars;
+var fruits =[ {name:"Banana", weight:500},
+{name: "Orange", weight:200},
+ {name: "Apple", weight: 1100},
+ { name: "Mango", weight: 150}];
+let fLen = fruits.length; // длина =4, т.е. 0,1,2,3 ( 4 элемента) поэтому знак <
+fruits[1]={name:"PEACH", weight:300};
+fruits.sort((a,b) => a.weight-b.weight);
+//fruits.sort((a,b) => a.name-b.name);
+console.log(fruits.toString()); // метод toString возвращает строковое представление объекта
+let text = "<ol>";
+for (let i = 0; i < fLen; i++) {
+ // text += "<li>" + fruits[i] + "</li>";
+ text += `<li>${fruits[i].name} ${fruits[i].weight}</li>`; // ковычки ~ 
+}
+text += "</ol>";
+
+document.getElementById("demo").innerHTML = text;}
+</script>
+</head>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Looping an Array</h2>
+
+<p id="demo"></p>
+
+<script>
+    //const cars = ["Saab", "Volvo", "BMW"];
+//cars[0] = "Opel";
+// document.getElementById("demo").innerHTML = cars;
+//var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//let fLen = fruits.length; // длина =4, т.е. 0,1,2,3 ( 4 элемента) поэтому знак <
+
+//let text = "<ol>";
+//for (let i = 0; i < fLen; i++) {
+ // text += "<li>" + fruits[i] + "</li>";
+//}
+//text += "</ol>";
+
+//document.getElementById("demo").innerHTML = text;
+
+
+//
+</script>
+<body>
+
+</body>
+</html>
