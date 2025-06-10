@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rectangle={
+leftTopX:2, // leftTop.X
+leftTopY:3,
+rightBottomX:6,
+rightBottomY:1,
+info: function(){
+    return `(координаты левой верхней точки ${this.leftTopX}, ${this.leftTopY}).
+    (координаты правой нижней точки ${this.rightBottomX}, ${this.rightBottomY}).`; // $ {()} если не поставить скобки функция не выполниться
+},
+width: function(){
+    const side1= Math.abs(this.rightBottomX-this.leftTopX);
+    const side2= Math.abs(this.leftTopY-this.rightBottomY);
+
+return side1 < side2 ? side1:side2;
+        },
+square: function(){
+   
+     const side1= Math.abs(this.rightBottomX-this.leftTopX);
+    const side2= Math.abs(this.leftTopY-this.rightBottomY);
+    return  side1*side2;
+},
+perimetr: function() {
+    const side1= Math.abs(this.rightBottomX-this.leftTopX);
+    const side2= Math.abs(this.leftTopY-this.rightBottomY);
+    return (side1*2)+(side2*2);
+},
+shift: function(dx,dy){ // сюда ли вставлять dx dy...?
+    this.leftTopX+=dx ;
+    this.leftTopY+=dy ;
+    this.rightBottomX+=dx;
+    this.rightBottomY+=dy;
+   
+    
+}
+  
+     }; 
+    console.log(rectangle.info());
+    console.log(rectangle.width());
+    console.log(rectangle.square());
+    console.log(rectangle.perimetr());
+    rectangle.shift(3,5);
+    console.log(rectangle);
+    </script>
+<script>
+ //       const rectangle2={
+//leftXY:(2,3),
+//rightXY:(6,1),
+//info: function(){
+ //   return `(координаты левой верхней точки ${this.leftXY}).
+  //  (координаты правой нижней точки ${this.rightXY}).`; // $ {()} если не поставить скобки функция не выполниться
+//}
+      //  }
+  //  console.log(rectangle2.info());
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

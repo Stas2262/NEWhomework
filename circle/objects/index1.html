@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const person = {
+  firstName: "John", // это объектный литерал
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }, // обьектные литералы перечисляются через "," через запятую 
+  // let x = 5  Это обектный литерал
+  // let x = "sdsdasdasd" это строковый литерал ( тоесть имеет конткретное значение)
+   
+  age: function (birthdate){
+let result;
+let now = new Date(2025,6,10);
+result=new Date(now-birthdate);
+    return result.getFullYear()-1970;
+}
+  
+};
+console.log(person.age(new Date(2000,5,4)));
+
+
+</script>
+   
+
+</body>
+</html>
