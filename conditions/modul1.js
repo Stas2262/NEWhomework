@@ -39,5 +39,17 @@ alert(formatCurrency(Number(prompt("Объем имеющихся у вас ру
 const exchangeUsd=(amount,usd)=>amount/this.rates[usd]; // 
 const exchangeEur=(amount,eur)=>amount/this.rates[eur];
 
-console.log(exchangeUsd(Number(prompt("Объем имеющихся у вас рублей равен:")), this.rates[usd]));   
+//console.log(exchangeUsd(Number(prompt("Объем имеющихся у вас рублей равен:")), this.rates[usd]));   
 //console.log(formatCurrency(75, 'eur')); 
+alert(Math.floor(prompt("введите доступный объем флешки в гб:") / 0.82)); //задание 7
+const loot=(wallet,price)=>wallet/price; // что значит нужна строка в математических вычисления и зачем
+const change=(wallet,price)=>wallet%price;
+let wallet=prompt("У вас в кошельке рублей?")
+let price=prompt('цена шоколалки')
+//alert(loot(prompt("У вас в кошельке рублей?"),price=prompt('цена шоколалки')+ change(wallet=prompt("У вас в кошельке рублей?"),price=prompt('цена шоколалки'))));
+alert(Math.floor(loot(wallet,price))+" "+ change(wallet,price)); // зад 8
+const num=Number(prompt("Введите число"));
+function isEven(num){
+num %2 ===0;
+}
+alert(Math.abs(isEven(num))); // зад 10
