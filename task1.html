@@ -5,15 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task1</title>
     <script>
-const name = prompt ("Введите имя:");
-alert("Привет!, "+ name +"!");
-const age = prompt ( "Введите дату рождения")
-alert("Вам" + " "+ (2025 - age) +" "+ "лет!" )
+class Dog {
+    constructor(name) {
+        this.name = name;
+      
+    }
 
+    bark() {  // метод
+        alert(`${this.name} говорит: Гав!`);
+    }
+}
+
+const dog = new Dog("Бобик 12 лет");  // вызов функции через new и this 
+dog.bark();  // "Бобик говорит: Гав!"
+
+    </script>
+    <script>
+        function introduce(greeting) {
+  console.log(`${greeting}, I'm ${this.name}`);
+}
+
+const person = { name: "Mike" };
+
+introduce.call(person, "Hi");    // "Hi, I'm Mike"
+introduce.apply(person, ["Hi"]); // "Hi, I'm Mike"
+
+const boundFunc = introduce.bind(person);
+boundFunc("Hello");              // "Hello, I'm Mike"
     </script>
 
 </head>
 <body>
-    
+    <script>
+  //      var data=confirm("сегодня четверг?");{
+   //     if (data) { 
+   //         var year= prompt ("а год какой"); 
+   //             if (year !=2025) { 
+      //              alert("Ошибка!");
+       //         }
+               
+       //            else if(year ==2025) { 
+        //                alert("Вы администратор");}
+         //                else(year==123);{
+         //               alert("добро пожаловать!");} // почему машина не понимает что есть секретный вход
+         //          }
+           //            else (data); {
+           //            var day= prompt("a kakoi segodnya den?")
+            //           } if(day !=4 ){
+            //            alert("neverno!") // почему else ставим ; а на if не ставим!
+
+             //          }
+             //        }
+                       
+                
+            
+         
+    </script>
+    <script>
+        
+        var n=parseInt(prompt("vvedite chislo"));
+        var sum=0;
+  for(  i=1; i<=n; i++){   
+    sum+=i; // deistive summi progressii
+    }
+    console.log(' сумма= '+ sum);
+        
+    </script>
+    <script>
+        var n=parseInt(prompt("vvedite chislo"));
+        for(i=1; i<=10; i++){
+         
+        console.log(`${k} x ${i}=${k*i}`); // знак $ значит вызав переменной и функции в строках
+        }   
+
+    </script>
 </body>
 </html>

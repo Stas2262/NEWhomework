@@ -5,20 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>funkcii</title>
     <script>
-function multiply (номер1, number2,number3) {
-  return  номер1/number2*number3;
 
+function repeat(excisize){
+    return `Ваше задание см ${excisize}`
 }
-function pechat (сообщение){ 
-    console.log(сообщение*сообщение);
-    
-}
-pechat("allo");
+alert(repeat("Упражнение №8"));
 
-
-console.log(multiply(1,2,3));
     </script>
+    <script>
+     //   let a;
+    //    let b;
+        function sum(a,b) {
+            return a+b;
+        }
+        confirm(sum(4,6)); // 10
+    </script>
+    <script>
+function isEven(a){
+  if  (a%2===0){
+    alert("четное");
+   } else { 
+    alert ("нечетное");
+   }
+}
+alert(isEven(3));
 
+    </script>
+    <input type="number"id="numberInput">
+    <button onclick="checkInput()">Проверить</button>
+<script>
+function checkInput(){
+    const number=parseInt(document.getElementById("numberInput").value);
+    if (!isNaN(number) && number%2===0){
+        alert("Четное");
+    }
+}
+</script>
+<script>
+   
+   function Checkmax(a,b) {
+        return a>b ? a:b; // это тернарный опретатор if
+        // if (a >b ){result= a } else {result = b} 
+       // Math.max(a,b);
+  }
+    console.log(Checkmax(10,20));
+    // через доллар $ мы записываем функцию в поле вывода
+</script>
+<script>
+    const maxValue = Math.max(10,100);
+    console.log(maxValue);
+</script>
+<script>
+   // let age=prompt("Введите ваш возраст")
+function rangeAge(age){
+
+    if(age <12 ){
+        alert("Ребенок");// if (age<12) return "Ребенок"; else if (age < 18) return "Подросток" ; else return 'Взрослый';
+    } else if ( age >=12 && age<18){
+        alert("Подросток");
+    }
+    else 
+        { alert ("Взрослый");}
+    
+} 
+rangeAge(25);
+</script>
+<script>
+    function reverseString(str) { // функция перервертышь.. переворачивает строку.
+return str.split("").reverse().join("");
+    }
+    console.log(reverseString("OPAOPAOPAAPAPA234"));
+   function summa(arr){
+    
+   }
+</script>
+<script>
+   
+</script>
 </head>
 <body>
     

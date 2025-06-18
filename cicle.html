@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num_1=5;
+var num_2=15;
+
+console.log ("Вычитание " + (num_1-num_2));
+var num_3=-5;
+var str_1= Number("12");
+var str_2= Number("2");
+console.log ("resault " + Math.abs(num_3) +" "+ (str_1 +str_2));
+console.log ("Math" + Math.PI + Math.min(5, -13, 1, -13.1)+ " " + Math.max(133, 0, 13))
+
+
+    </script>
+    <script>
+        var number= 0;
+        var isHasHouse=true;
+        if (number!=15 && !isHasHouse) {
+            console.log("OK");
+            console.log("ok!");
+        }
+        else if(number <10 && isHasHouse==true ) {
+console.log(" ne 10!"); 
+
+        }
+        else if (number == 15 || !isHasHouse) {  // || = или && = и
+console.log("15!");
+        }
+         else {
+            console.log("error");
+
+        }
+    </script>
+  
+  
+  <script src=C:\hTML\JSprac\cicle1.js>
+
+    </script>
+    <script>
+        var stroka = 4;
+
+        switch(stroka){
+            case 4: console.log("переменная со значением 4")
+            break;
+            case "50": console.log ( "переменная со значением 50")
+            break;
+            case "word": console.log ( "переменная со значением word")
+            break;
+            default:
+                console.log("default");
+                break
+        }
+    </script>
+    <script>
+       // var arr=new Array(); создание массива или квадратные скобки
+        var arr=[5, true, "stroka", 5.7,0,-110];
+        arr[3]="daeshmolodezh"
+        console.log(arr);
+
+        var matrix=[
+            [4,5,6],["stroka", true ],[0,-110]];
+            matrix[1][0]= 90;
+            console.log(matrix);
+    </script>
+    <script>
+        // циклы
+      //  for(var i = 50; i>=3; i/=3 ){
+       // console.log(i);}
+    //   var t=1000;
+  // while(t >=10){
+    //console.log(t);
+    // t-=100;
+  // } 
+   //var isHasCar=true;
+   // while(isHasCar){
+
+ //  }
+ var x= 100;
+ do { console.log(x + "  значение не верное");
+ x-=5;
+
+ } while(x < 50) {}
+
+    </script>
+    <script>
+        for(i=0; i<=20; i+=3){
+   //         if (i>12) 
+     //       break;
+     if(i % 2 ===0)
+     continue;
+            console.log(i);
+        }
+    </script>
+    <script>
+        var arr= [5, 7, 3,8, 9, 10];
+        for (var i=0; i< arr.length; i++){
+            arr[i] *=2;
+            console.log("элемент "+ (i+1) + ": " + arr[i]);
+        }
+    </script>
+    <script>
+        for ( i=0; i < 5; i++){
+            
+            console.log('элемент' + (i+1)+ ":" + i);
+        }
+    </script>
+</body>
+</html>

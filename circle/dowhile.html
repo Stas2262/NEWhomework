@@ -18,6 +18,75 @@ do  {
 } while (counter<=5)
 
     </script>
+    <script>
+let text = ""
+let i = 0;
+
+do {
+  console.log(text += "<br>The number is " + i);
+  i++;
+}
+while (i < 5);  
+
+
+    </script>
+    <script>
+        let userInput;
+       // let num=0;
+        do {
+            userInput= prompt ("Введите число от 1 до 10");
+        
+        } while (isNaN(userInput) || userInput < 1 || userInput > 10 );
+        console.log("Спасибо вы ввели:" + userInput)
+    </script>
+    <script>
+        let roll;
+        do {
+               roll= Math.floor(Math.random()*6)+1; // почему 6 если 6-1 будет 5..
+                console.log("выпало  " + roll);
+               //  return Math.floor(Math.random)*(max-min)+min; // max - min это диапозон чисел
+            
+            
+        } while ( roll !==6); // цикл продолжается пока не будет введно 6 
+        console.log("eeeah");
+    </script>
+    <script>
+       let sum=0;
+       let number;
+       do {
+        number=+prompt('введите число');
+        sum+=number;
+        console.log("сумма введеный чисел "+ sum);
+       }
+       while (number!==0); // выдает сумму введеных чисел, вывод из цикла нажав число 0
+       
+    </script>
+    <script>
+        const secretNumber=Math.floor(Math.random()*10);
+     let attempts=3;
+   alert("Слышь че угадаешь мороженное получаешь")
+     do{
+        
+     let firstRoll=parseInt(prompt(`Ваша попытка ${4 - attempts} введите число`)); // почему 4-attempts?????
+     if (firstRoll===secretNumber){
+        alert(`Ах ты мразь ${secretNumber} угадан`);
+        break;
+     }
+       // else if(firstRoll > secretNumber) {
+         //   alert(" это число меньше епта");
+           //  }
+else {
+                alert ("Ой блять не туда");      
+     }
+     attempts--
+     } while (attempts > 0);
+     if (attempts===0 && firstRoll !==secretNumber){
+        alert(`к сожалению попытки закончились, заданное число было ${secretNumber}.`);
+        confirm("eще раз. лузар?")
+        if (confirm){}
+            
+     };
+    </script>
 </head>
 <body>
     

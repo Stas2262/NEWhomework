@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isEven(num){
+           return num %2===0;
+        }
+            console.log(isEven(5));
+        
+    </script>
+    <script>
+           let a=Number(prompt("введите первое число" ));
+             let b=Number(prompt("введите второе число"));
+              let c=Number(prompt("введите третье число"));
+        function max(a,b,c){
+          
+       return Math.max(a,b,c)
+         //   if (a>b){
+      //          alert(a);
+      //      }
+      //      else {alert (b);}
+       }
+          console.log(Math.max(a,b,c));
+    </script>
+    <script>
 
+       // let str="asdadsadadad";
+        function reverzs(str){
+
+return str.split('').reverse().join('');
+
+        }
+       console.log(reverzs("asdsadsag"));
+    </script>
+    <script>
+      
+        function sumarr(arr){
+           let sum=0;
+           // return sum=[...number]
+           for(i=0; i<arr.length; i++ )
+           sum+=arr[i];
+           return sum;
+           }
+           let array_1=[1, 23, 532];
+           let array_2=[2,23,4214];
+           let res=sumarr(array_1)+sumarr(array_2);
+          console.log("результат:" + `${res}`);
+       // function setArr(arr){ }
+       // const set=new Set();
+       // const filledSet= new Set([1,2,3,3.1,3,3,4,4,5]);
+    //    set.add(1);
+    //  const array=[1,1,1.1,1.2,5,3,2,3,4,5,5];
+     //   console.log([...set])   
+           
+    </script>
+    <script>
+//function hasDuplics(array){
+ const array=[1,2,1,1,2,2,3,4,4,5];
+    const unique=[...new Set(array)];
+   
+  //  return array.length !==new Set(array).size
+ console.log(unique);
+
+ function Duplics(array){
+    return array.length !==new Set(array).size;
+ }
+    </script>
+ <script>
+    function getUnique(arr) {
+  return [...new Set(arr)];
+}
+
+console.log(getUnique([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
+ </script>
+    
+</body>
+</html>

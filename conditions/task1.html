@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task1</title>
-    <script>
-        let age = prompt('Возраст?');
-
-if  (age >=0 && age <= 2) { message =  "Здравствуй, малыш!";
-    } else if 
-  (age >=12 && age <=18) {message ='Привет! молодой';
-    } else if ( age >= 18 && age <60) { message = "Привет ! взрослый!"}
-     else if 
-  (age <= 60) { message = 'дед';
-    } else 
-   { message = 'Какой необычный возраст!';}
-
-alert ( message );
-
-    
-    </script>
+  
 </head>
 <body>
     
+    <script>
+     // function buttonClick(el) {
+       
+    //    counter++;
+    //   el.innerHTML = "Вы нажали на кнпоку " + counter;
+    //   el.style.background="red";
+     //  el.style.color="green";
+     //  el.style.cssText="Border-radius:10px; border:0; font-size:20px";
+     //  console.log(el.value);
+     // }
+    //  function onInput(el){ 
+     //   if (el.value=="шлюха"){
+      //    alert("cама такая");
+      //  }
+     //   console.log(el.value);
+  //    }
+
+    </script>
+     <form id='main-form' method="post">
+      <label for="name"> имя </label>
+      <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+     <label for ="password">пароль</label>
+     <input type="password" password="pass" placeholder="Пароль" id="pass"><br><br>
+     <label for ="repass">проверка пароля</label>
+     <input type="repass"repass="repass" placeholder="Проверка пароля" id="repass"><br><br>
+     <span>Пол:</span>     
+     <input type="radio" name ="state" id="male" value="Мужской">
+     <label for="male">мужской</label>
+     <input type ="radio" name ="state" id="female" value="Женский">
+     <label for="female">женский</label><br><br>
+     <div id="error" style="color:red"></div>
+     <input type="submit"  name ="submit" value="Готово">
+     </form>  
+    <script src="main.js"> </script> 
 </body>
 </html>
