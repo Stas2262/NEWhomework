@@ -48,8 +48,15 @@ let wallet=prompt("У вас в кошельке рублей?")
 let price=prompt('цена шоколалки')
 //alert(loot(prompt("У вас в кошельке рублей?"),price=prompt('цена шоколалки')+ change(wallet=prompt("У вас в кошельке рублей?"),price=prompt('цена шоколалки'))));
 alert(Math.floor(loot(wallet,price))+" "+ change(wallet,price)); // зад 8
+///////
+//let rev=String(prompt("Введите трехзначное число:"))
+function reverseStr(str){
+    return str.split('').reverse().jion(''); // split разбивает строку на массив символов, реверс -переворачивает, join - обьединяет массив в строку
+}
+alert(reverseStr(parseInt(prompt("Введите трехзначное число:"))));
+////////
 const num=Number(prompt("Введите число"));
 function isEven(num){
 num %2 ===0;
 }
-alert(Math.abs(isEven(num))); // зад 10
+alert(Math.abs(isEven(num))); // зад 10     
