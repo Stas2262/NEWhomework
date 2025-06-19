@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1.1</title>
+<script>
+    class Marker {
+  constructor(color, inkPercentage) {
+    this.color = color; // Цвет маркера
+    this.inkPercentage = inkPercentage; // Количество чернил в процентах (0-100)
+  }
+
+  // Метод для печати текста
+  print(text) {
+    let output = '';
+    let remainingInk = this.inkPercentage;
+    
+    for (const char of text) {
+      if (remainingInk <= 0) {
+        console.log("%cЧернила закончились!", `color: red`);
+        break;
+      }
+      
+      // Пробельные символы не расходуют чернила
+      if (char !== ' ' && char !== '\t' && char !== '\n') {
+        remainingInk -= 0.5; // Каждый символ - 0.5% чернил
+      }
+      
+      output += char;
+    }
+    document.write(output);
+    
+    // Выводим текст цветом маркера
+    console.log(`%c${output}`, `color: ${this.color}`);
+    
+    // Обновляем количество чернил
+    this.inkPercentage = Math.max(0, remainingInk);
+    console.log(`Остаток чернил: ${this.inkPercentage.toFixed(1)}%`);
+  }
+
+  // Геттер для цвета
+  get color() {
+    return this._color;
+  }
+
+  // Сеттер для цвета
+  set color(value) {
+    if (typeof value === 'string' && value.trim() !== '') {
+      this._color = value;
+    } else {
+      console.error('Цвет должен быть непустой строкой');
+    }
+  }
+
+  // Геттер для количества чернил
+  get inkPercentage() {
+    return this._inkPercentage;
+  }
+
+  // Сеттер для количества чернил
+  set inkPercentage(value) {
+    if (value >= 0 && value <= 100) {
+      this._inkPercentage = value;
+    } else {
+      console.error('Количество чернил должно быть между 0 и 100%');
+    }
+  }
+}
+ let redMarker= new Marker ("red" , 5);
+   //  redMarker.inkAmount=(prompt("Введите количество чернил"));
+     redMarker.print("12 3213dad");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

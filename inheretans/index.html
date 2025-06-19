@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+    <script>
+    class Products{
+        constructor(name , price){
+            this.name=name;
+            this.price=price;
+        }
+        getInfo(){
+            return `Product[name:${this.name}; price:${this.price} ]`;
+        } 
+    }
+    class Clothes extends Products{
+        constructor(name, price, size){
+            super(name,price);
+            this.size=size;
+        }
+        getInfo(){
+const result=super.getInfo()+ `size:${this.size}`;
+return result;
+            // return `Clothes[name:${this.name}; price:${this.price}; size:${this.size} ]`;
+        }
+    }
+    let clothes = new Clothes("T-shirt", 12, "M");
+    console.log(clothes.getInfo());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
