@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+    window.onload=()=>{
+ let links = document.getElementsByTagName ("a");
+ for (let i=0; i< links.length; i++) {
+      if ((links[i].href.startsWith("http://")) ||
+      links[i].href.startsWith("https://")) {
+      links[i].style.textDecorationStyle="dashed";
+      
+ } else {
+     links[i].style.textDecoration="none";
+ }
+ }
+
+    }
+    
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html" > index.html</a></li>
+        <li><a href=http://google.com >http://google.com</a></li>
+        <li><a href=http://itstep.org >http://itstep.org</a></li>
+        <li><a href=http://mystay.itstep.org >http://mystay.itstep.org</a></li>
+        <li><a href=/images/cat.jpg >/images/cat.jpg</a></li>
+        <li><a href=/local/pat >/local/path</a></li>
+    </ul>
+</body>
+</html>

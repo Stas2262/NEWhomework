@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+   <!--window.onload=()=>{
+   }         функция анонимная - используется один раз    -->
+</head>
+<body>
+
+    <div id="div1">
+    <h1>DOM</h1>
+    </div>
+    <div id="div2" class="div-style">
+            <h1>DOM</h1>
+    </div>
+    <!---->
+      <script>
+        
+    let p = document.createElement("p");
+    p.innerText="lorem ipsun";
+    let p2=document.createElement("p");
+    p2.innerText="lorem ipsun2";
+    document.getElementById("div1"). appendChild(p2);
+   document.getElementById("div1"). appendChild(p);
+    // создать elem
+    setTimeout(()=>{
+        document.getElementById("div1").removeChild(p);
+    },5000)
+let p3=document.createElement("p");
+p3.innerText="Hello Wolrd!";
+document.getElementById("div1").replaceChild(p3,p2);
+p3.onclick=()=>{
+    p3.style.backgroundColor="grey"
+};
+
+
+    // document.removeChild(element) // удалить elem
+   // document.appendChild(element)//добавить elem
+   // document.replaceChild(new, old) // заменить elem
+  //  document.write(text) 
+ 
+    </script>
+</body>
+</html>

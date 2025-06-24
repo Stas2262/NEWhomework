@@ -22,13 +22,13 @@
     }
     }     
     print(text){
-        let result=`<p style= "color:${this.color}'>`;
+        let result=`<p style="color:${this.color}">`;
             for (const char of text ){
                 if (this.inkAmount===0 )
                 alert("Чернила закончились")
                 break;
             
-            if (char !== ' ' && char !=='\n' ){
+            if (char !== ' ') {
               this.inkAmount-=0.5; 
             }
              result+= char;
@@ -36,13 +36,14 @@
         result+='</p>'
         //document.body.insertAdjacentHTML( result);
         document.write(result);
+    
     }      
 
         // this.marker=New Marker
 
     //    let marker= new  Marker ("red", 5)
      }
-     let redMarker= new Marker ("red" , 5);
+     let redMarker= new Marker ("red" , 100);
    //  redMarker.inkAmount=(prompt("Введите количество чернил"));
      redMarker.print("12 3213dad");
 
