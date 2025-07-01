@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   document.body.style.background="yellow" ;              /* заменим цвет фона на желтый, */
+
+
+let timerId = setInterval(() => {                        /* каждую 1 сек изменим цвет фона на ...*/
+   function getRandomNeonColor() {
+ const letters = '0123456789ABCDEF';
+  let color = '#';
+  // Генерируем насыщенные цвета (используем 8-F для яркости)
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(8 + Math.random() * 8)]; // Только яркие значения (8-F)
+  }
+  return color;}
+  setInterval(() => {
+  document.body.style.background = getRandomNeonColor();
+}, 0.1)
+}
+
+);
+let timerId1 = setTimeout( () => {                        /* а через 12 секунд вернём как было*/
+    clearInterval(timerId);
+    document.body.style.background = "yellow"; 
+    alert("Stop"); 
+}, 12000 
+);
+    document.onclick = document.onkeydown = function() {
+let newWin = window.open('','', 'height=100,width=100');
+newWin.document.write('Вас взломали! \u{1F630}');
+newWin.document.body.style.fontSize = '30px';
+newWin.document.body.style.background = 'red';
+newWin.document.body.style.color = '#cfcfcf';
+setInterval(() => newWin.moveBy( 100 * Math.random() * (Math.random() > 0.5 ? 1 : -1), 50 * Math.random() * (Math.random() > 0.5 ? 1 : -1) ), 50);
+}
+</script>
+</body>
+</html>

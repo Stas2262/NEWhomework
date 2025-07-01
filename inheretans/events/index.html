@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .block {
+            width: 30px;
+            height: 20px;
+             cursor: default; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+   /*   .block:hover {
+            transform: scale(1.05); 
+        } */
+        button {
+            padding: 5px 15px;
+            background-color: #f6f6f6;
+            color: rgb(10, 10, 10);
+            border: none;
+            border-radius: 5px;
+           cursor: pointer;
+            font-size: 16px;
+        } 
+     /*   button:hover {
+            background-color: #45a049;
+        } */
+    </style>
+    <script>
+ 
+
+  //  window.onload=()=>{
+
+    //}
+        
+     </script>
+
+</head>
+<body>
+    <button id="addBlock">add block</button>
+    <div id="container"></div>
+    <script>
+     document.getElementById('addBlock').addEventListener('click', function() {
+            // Создаем новый блок
+            const block = document.createElement('div');
+            block.className = 'block';
+            
+            
+            const randomColor = getRandomColor(); // рандом цвет
+            block.style.backgroundColor = randomColor;
+            
+            // Добавляем номер блока
+            const blockNumber = document.querySelectorAll('.block').length + 1;
+           block.textContent=blockNumber;
+            
+            // Добавляем обработчик клика для удаления
+            block.addEventListener('click', function() {
+                this.remove();
+            });
+            
+            // Добавляем блок в контейнер
+            document.getElementById('container').appendChild(block);
+        });
+        
+        // Функция для генерации случайного цвета
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>

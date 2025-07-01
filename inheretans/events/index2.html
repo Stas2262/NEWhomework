@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        button.addEventListener("click", clickHandler);
+        function clickHandler(){let coloredBlock=documet.createElemet("div");
+            coloredBlock.style.backgrounColor=getRandomColor();
+            coloredBlock.addEventListener("click", function(){
+                mainBlock.removeChild(coloredBlock);
+            });
+            mainBlock.appendChild(coloredBlock);
+        }
+     //   button.onclick =()=>{
+    //        let coloredBlock=documet.createElemet("div");
+      //      coloredBlock.style.backgrounColor=getRandomColor();
+      //      mainBlock.appendChild(coloredBlock);
+     //   }
+        function getRandomColor(){
+            const red=Math.floor(Math.random()*255);
+             const blue=Math.floor(Math.random()*255);
+              const green=Math.floor(Math.random()*255);
+        }
+    </script>
+</body>
+</html>

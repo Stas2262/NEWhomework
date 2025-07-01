@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+   document.body.style.background="yellow" ;              /* заменим цвет фона на желтый, */
+
+
+let timerId = setInterval(() => {                        /* каждую 1 сек изменим цвет фона на ...*/
+   function getRandomNeonColor() {
+ const letters = '0123456789ABCDEF';
+  let color = '#';
+  // Генерируем насыщенные цвета (используем 8-F для яркости)
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(8 + Math.random() * 8)]; // Только яркие значения (8-F)
+  }
+  return color;
+  setInterval(() => {
+  document.body.style.background = getRandomColor();
+}, 0.010)
+}
+}
+);
+
+let timerId1 = setTimeout( () => {                        /* а через 12 секунд вернём как было*/
+    clearInterval(timerId);
+    document.body.style.background = "yellow"; 
+    alert("Stop"); 
+}, 12000 
+);
+</script>
+</body>
+</html>

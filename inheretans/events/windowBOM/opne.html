@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>The Window Object</h1>
+<h2>The open() Method</h2>
+
+<p>Click the button to open a new browser window.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myClose()">Try it</button>
+<button onclick="myMove()">Try it</button>
+<button onclick="showURL()">current url</button>
+<p>Forward</p>
+<script>
+    function back(){
+    history.back(); 
+}
+    function forward(){
+    history.forward();
+    }
+    window.alert("Привет!");
+    function showURL(){
+        console.log(window.location.href);
+    }
+function myFunction() {
+  window.open("https://www.w3schools.com");
+}
+</script>
+
+</body>
+</html>
